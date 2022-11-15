@@ -17,7 +17,7 @@ To get a local copy up and running follow these simple steps.
 
 ## 🌎 Live Demo:
 
-- [Portfolio](https://aseadd.github.io/portfolio/)
+- [Portfolio](https://aquamarine-travesseiro-3c9d60.netlify.app/)
 
 ### Prerequisites
 
