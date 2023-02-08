@@ -28,7 +28,36 @@ for (let i = 0; i < navbarLinks.length; i++) {
 }
 
 
+/* 
+Validate Contact Form
+*/
 
+function validate() {
+  const name = document.getElementById('name').value;
+  const email = document.getElementById('email').value;
+  const message = document.getElementById('message').value;
+  const error = document.getElementById('error_message');
+
+  let text;
+  if(name.length < 5) {
+    text = "Please Enter Valid Name";
+    error.innerHTML = text;
+    return false;
+  }
+  if(email.indexOf("@") == -1 || email.length < 6) {
+    text = "Please Enter Valid Email";
+    error.innerHTML = text;
+    return false;
+  }
+
+  if(message.length <= 20) {
+    text = "Please Enter More Than 20 Characters";
+    error.innerHTML = text;
+    return false;
+  }
+  alert("Form Submitted Successfully!");
+  return true;
+}
 
 
 /**
@@ -87,8 +116,8 @@ const checkEmail = () => {
 }
 
 
-form.addEventListener('submit', (e) => {
-  e.preventDefault();
+// form.addEventListener('submit', (e) => {
+//   e.preventDefault();
 
-  checkEmail();
-});
+//   checkEmail();
+// });
