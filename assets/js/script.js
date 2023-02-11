@@ -37,6 +37,7 @@ function validate() {
   const email = document.getElementById('email').value;
   const message = document.getElementById('message').value;
   const error = document.getElementById('error_message');
+  const success = document.getElementById('success_message');
 
   let text;
   if(name.length < 5) {
@@ -55,7 +56,12 @@ function validate() {
     error.innerHTML = text;
     return false;
   }
-  alert("Form Submitted Successfully!");
+ text = "Your message has been sent successfully";
+ success.innerHTML = text;
+ error.innerHTML = '';
+ name.value = '';
+ email.value = '';
+ message.value = '';
   return true;
 }
 
